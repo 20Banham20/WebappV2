@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Webapp.css') }}">
+    <meta charset="UTF-8">
+    <title>Creation Page</title>
+</head>
+<body>
+<nav class="nav">
+    <div>
+        <h1>Welcome to the Creation page!</h1>
+    </div>
+    <div>
+        <p><a id="button" href="{{ url_for('favourites') }}">Favourites</a></p>
+    </div>
+</nav>
+<form method="post">
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="player">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAC9AMEDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/xAA7EAACAQIDBAcGBAQHAAAAAAAAAQIDESExQQQSUXEiMjNCUmGRBRNygbHBFIKSoSM0U6NUY6Ky0eHx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AP1sAAAAAAAAFd5FXOwGhXejdq+Ud58jnlUbEJdNPirfcDLYvamx7akoS3KutKo0pfleTO8+Sns7p16i3XLcqSV10ZZ4WeR6VCtXhFL3tVLhJN/S4HtkNpYtpc2eb7/aHlVl8oO/0KS/ETuryfnK0f8Al/sB3/iqPvPd9JOzlvNdHBpZmylGWTT5HmUKDW9Opu26KSinpdttvH/w6I4Y5NgdgOeNWSzs0axqQl5PzAuAAAAAAAAAAAAAAAAZt4bz1dkhJtlG0/fR/puC/wBKYByKSZVsRW9yAjdb5FrJLz0ZYgDl2jZY1nvro1UrX0kuDMacalN7s4tcHmvVHoEWejAxVsLGkYN4ywX7st0uKXyG6tbsBna2EUGmSAM2wm0TJXxWf1Ihq+CA0VScbfRnRGSkk0cM5tVNmhfrqbNIVHCXlk0B2AhNNJrJkgAAAAAAAACjloJySRSOKuBZnLRnvVttj5wkuVkjeTOSkmtslbKdCpfnGULAavNlo2yKPC/my0bgXIJIYEXJIJAE2BIFSGSVYEIlq0ZNd4hFpdVgcVaV/afs+mu7sm1Vn8pRgjVyu3zZzRvU9qVamlH2bTp8nUrTf2Nrq4HZQq26DyeXkzqPNWZ20am/GzzX7gagAAAABWUrISkoq7yyvouZne973wArJt2LLBGcr3XAu3ZAVk8UuLMYfzK+Con+zNG7yiYwbe1fqj+1wNZrEiLLVDNZgbIiRKyIlkBGiBAAsTcgAQyt8SWyuoFkTN2iQiKj6LA4dmvLafa8tE9jor8tFVH/ALi+q5lNkf8AF9rLhtFK/P8AD0y+clzA2WZpCThJMpFFnkB3JppNZMk5qFTuvLQ6QAAAhq6aeTwxMXT92lut7i4tvdXC7xsbkYAc7Ib0LyhuvDqvLy8jJtYgHZO70Mackq9F6zrSj/bnL7Eyldsyp9PatkSfZzrVH5/w5RX1YHZUz+ZksGazMgNEyWQidAKMCWZFwLokpHEuBVlC0ioF0VnjF8iUHkwPN2TCt7db/wAdCC/LstFG0MZGcFuvbf8AM2py/twj9janHJgbxWBDeZbQzb9OIEqVmrZndSnvrHNZnLQoSmt53jB5cWvI7IxjFJRSSQFgAAAAENJpp5M4q0ZU5JaSu0zuKyhCdlJJpO6vxA8pQ2ivNxpLBdacr7sTto7JRoLetv1f6klir4PdWh0pJYKyXBB5MDnnkzA3nkzB4MDSOhczjoaLIDKbM28i08zJvFAbwLlIaF3mBSTK6ksriBog8nyIQl1XyAp+Cpe7lWpRtWqNVKqTlao0lHJuydkjOm01yw8z0aPZUvhRjW2Zyk6lJpTfWWkvPmBg8eR0UtnxU6ix7seHMtRouKUp9fhpH/s3AAAAAAAAAAAAQ8mSQ8mBzzyOdvE3q5WObUDWOhojOJdZAZVGY6ovUzM9QOiJdmUTZ5AZSIRMiqzQFxPGLIDyA7KPZU/hNDKh2VPl9zUAAAAAAAAAAAAAAEPJklZYRYHNU1MNTaWXqYPADRGmjMommgGE8zN5mkszPvAbRvc10MYm3dAzlkUWZeRmgLktlUSB2UOyh8/qamVDsofm+pqAAAAAAAAAAAAAAClTqyLlKnUYHLLIxZrJ4GLzQF46GndMommgGckZd5GstTLUDSJt3UYI37oFJGeppIzAlE6FUS8gO3Z+yjzl9TYx2bsl5SkbAAAAAAAAAAAAAAApU6jLmdZ9B/IDjbKMsyjzAlGvdMkad0DN6mXeNWZLrAX1N11TB5o2j1QIZk8zVmTzAE6EIl5Aduzdl+aRuc+y9m/jf0R0AAAAAAAAAAAAAAAyr9m+aNTGv1PmBxsqTixawEXNO6ZGjeCAqzHvGryMn1rgaGsMjFM1iAkZPM2ZlqAJeRBDA7tk7OXxfY6Dn2Xs38X2OgAAAAAAAAAAAAAAGO0XcElbFmwsuAHBZ62+RV8j0N2DzjH0RG5T8MfRAedZ7yNNzkdu5T8EfRDcp+GPogPNn5Gai27YHre7p+CH6UPd0/BD9KA81RwWXqaRyd2ju3IeGPoid2PhXogOJq60M3F+R6O7HgvRDdh4Y+iA8yz4x9SLPWx6e5Dwx9ENyHhj6IDHZupJcGjoISSySXJWJAAAAAAAAA//2Q==" alt="White Tee">
+                <div class="desc">
+                    <h3>White Tee</h3>
+                    <input type="text" name="WhiteTee" id="WhiteTee" placeholder="Enter White Tee">
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="player">
+                <img src="https://th.bing.com/th/id/OIP.YpiwJqZc-AvPnc4GHpt5yQHaHR?w=180&h=180&c=7&r=0&o=5&pid=1.7" alt="Black Tee">
+                <div class="desc">
+                    <h3>Black Tee</h3>
+                    <input type="text" name="BlackTee" id="BlackTee" placeholder="Enter Black Tee">
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="player">
+                <img src="https://th.bing.com/th/id/OIP.kjCckSt5TMf0M89-D9NkUgAAAA?w=172&h=180&c=7&r=0&o=5&pid=1.7" alt="Beige Tee">
+                <div class="desc">
+                    <h3>Beige Tee</h3>
+                    <input type="text" name="BeigeTee" id="BeigeTee" placeholder="Enter Beige Tee">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="submit">Submit</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

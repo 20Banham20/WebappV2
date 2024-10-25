@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Webapp.css') }}">
+</head>
+<nav class = nav>
+    <div>
+        <h1>Welcome to the Favourites page!</h1>
+        <p> <a id ="button" href="{{ url_for('creation') }}">Creation page</a></p>
+    </div>
+</nav>
+
+{% block content %}
+<h2>Edit Tees</h2>
+<form method="post">
+    <label for="title">WhiteTee</label>
+    <input type="text" name="WhiteTee" id="WhiteTee" value="{{ outfit.WhiteTee}}" required>
+    <label for="platform">BlackTee</label>
+    <input type="text" name="BlackTee" id="BlackTee" value="{{ outfit.BlackTee }}" required>
+    <label for="platform">BeigeTee</label>
+    <input type="text" name="BeigeTee" id="BeigeTee" value="{{ outfit.BeigeTee }}" required>
+    <button type="submit">Update user</button>
+</form>
+{% endblock %}
+
+ 
+</body>
+</html>
